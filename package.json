@@ -1,0 +1,19 @@
+{
+  "name": "bitskins",
+  "version": "1.0.0",
+  "description": "Unofficial BitSkins API client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alvinl/bitskins.git"
+  },
+  "author": "Alvin Lazaro <me@alvinl.com>",
+  "license": "MIT",
+  "dependencies": {
+    "onceler": "0.0.5",
+    "request": "2.72.0"
+  }
+}
