@@ -291,7 +291,7 @@ module.exports = class BitSkins {
 
   /**
    * Returns bought / sold / listed item history
-   * - https://bitskins.com/api#get_sell_history
+   * - https://bitskins.com/api#get_item_history
    *
    * @param  {Object}  options Call options
    * @return {Promise}
