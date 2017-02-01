@@ -1,5 +1,6 @@
 
 # BitSkins API client
+[![dependencies Status](https://david-dm.org/alvinl/bitskins/status.svg)](https://david-dm.org/alvinl/bitskins)
 
 The unofficial [BitSkins](https://bitskins.com/) API client.
 
