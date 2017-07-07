@@ -232,7 +232,7 @@ module.exports = class BitSkins {
     if (options && Array.isArray(options.item_ids))
       options.item_ids = options.item_ids.join(',');
 
-    return this._callAPI('modify_sale_item', options);
+    return this._callAPI('withdraw_item', options);
 
   }
 
