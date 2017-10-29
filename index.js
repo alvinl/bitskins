@@ -16,12 +16,14 @@ module.exports = class BitSkins {
    *
    * @param  {String}   apiKey  API key
    * @param  {String}   totpKey TOTP key
+   * @param  {String=}   appId  App ID (defaults to CS:GO if not specified)
    * @return {BitSkins}         BitSkins instance
    */
-  constructor(apiKey, totpKey) {
+  constructor(apiKey, totpKey, appId) {
 
     this.totpKey = totpKey;
     this.apiKey = apiKey;
+    this.appId = appId;
 
     this._req = request.defaults({
 
@@ -46,9 +48,14 @@ module.exports = class BitSkins {
      * POST payload
      * @type {Object}
      */
-    const body = Object.assign({ code:    totp.gen(base32.decode(this.totpKey)),
+    var body = Object.assign({ code:    totp.gen(base32.decode(this.totpKey)),
                                  api_key: this.apiKey },
                                options);
+
+    if (typeof this.appId !== 'undefined')
+    {
+        body.app_id = this.appId;
+    }
 
     return this._req(method, { body: body });
 

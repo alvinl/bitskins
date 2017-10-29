@@ -13,7 +13,7 @@ $ npm install bitskins-api
 ## Example
 ```js
 const BitSkins = require('bitskins-api');
-const bitskins = new BitSkins(apiKey, secret);
+const bitskins = new BitSkins(apiKey, secret, appId);
 
 bitskins.getTradeDetails({ trade_token: 'd3bedb77f7430e68', trade_id: 'ddc126dc3cc4e8a2'  });
 bitskins.getMarketData({ names: ['AK-47 | Redline (Field-Tested)'] });
@@ -23,10 +23,11 @@ bitskins.getMarketData({ names: ['AK-47 | Redline (Field-Tested)'] });
 
 All of the following methods return a native [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). Some methods allow you to pass addtional data via an object when calling the API. See the methods [API reference](https://bitskins.com/api) to see what data can be sent.
 
-### Constructor(apiKey, secret)
+### Constructor(apiKey, secret, appId)
 
 - `apiKey` - Your BitSkins API key. Can be found in your [settings page](https://bitskins.com/settings)
 - `secret` - Your 2FA secret. This is shown to you when enabling 2FA on your account.
+- `appId` - The Steam appId for the inventory's game (defaults to CS:GO if not specified). (optional)
 
 Creates a new `BitSkins` instance.
 
